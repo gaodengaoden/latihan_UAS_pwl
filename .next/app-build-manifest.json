@@ -5,11 +5,37 @@
       "static/chunks/main-app.js",
       "static/chunks/app/layout.js"
     ],
+    "/kegiatan/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/kegiatan/page.css",
+      "static/chunks/app/kegiatan/page.js"
+    ],
+    "/api/kegiatan/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/kegiatan/route.js"
+    ],
+    "/api/organisasi/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/organisasi/route.js"
+    ],
+    "/api/kegiatan/[id]/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/kegiatan/[id]/route.js"
+    ],
     "/organisasi/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/organisasi/page.css",
       "static/chunks/app/organisasi/page.js"
+    ],
+    "/api/organisasi/[id]/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/organisasi/[id]/route.js"
     ]
   }
 }

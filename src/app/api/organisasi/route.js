@@ -2,23 +2,23 @@ import prisma from "@/lib/prisma";
 
 export async function GET() {
     const data = await prisma.organisasi.findMany({
-        namaOrganisasi: { id: 'asc' },
+        orderBy: { id: 'asc' },
     });
 
     return new Response(JSON.stringify(data), { status: 200 });
 }
 
 export async function POST(request) {
-    const { nama, ketua, kontak } = await request.json();
+    const { nama_organisasi, ketua_organisasi, no_kontak, tahun_dibentuk, pembina } = await request.json();
 
-    if (!nama || !ketua || !kontak) {
+    if (!nama_organisasi || !ketua_organisasi || !no_kontak || !tahun_dibentuk || !pembina) {
         return new Response(JSON.stringify ({ error: 'Semua field wajib diisi' }), {
             status: 400,
         });
     }
     
     const organisasi = await prisma.organisasi.create({
-        data: { nama, ketua, kontak },
+        data: { nama_organisasi, ketua_organisasi,  no_kontak: parseInt(no_kontak),  tahun_dibentuk: parseInt(tahun_dibentuk), pembina },
     });
 
     return new Response(JSON.stringify(organisasi), { status: 201 });

@@ -1,1 +1,6 @@
-{}
+{
+  "/api/kegiatan/route": "app/api/kegiatan/route.js",
+  "/api/organisasi/route": "app/api/organisasi/route.js",
+  "/kegiatan/page": "app/kegiatan/page.js",
+  "/organisasi/page": "app/organisasi/page.js"
+}
